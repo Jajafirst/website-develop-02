@@ -171,7 +171,7 @@ footer .copyright {
 
 @media (max-width: 768px) {
   .intro-section {
-    max-height: 60vh;
+    max-height: 70vh;
     flex-direction: column;
     margin-top: 50px;
     padding: 20px;
@@ -179,6 +179,7 @@ footer .copyright {
   }
 
   .left img {
+    margin-top: 30px;
     width: clamp(180px, 60vw, 300px);
     height: auto;
   }
@@ -192,6 +193,7 @@ footer .copyright {
 
   .contact-btn {
     align-self: center;
+    margin-bottom: 30px;
   }
 
 
