@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header>
+    <div class="name">Jatupon Itsara</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="../../pages/home/index.html">Home</a>
+      <a href="../../pages/about/index.html">About Me</a>
+      <a href="../../pages/project/index.html">Project</a>
+      <a href="../../pages/certificate/index.html">Certificate</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro-section">
+      <div class="left">
+        <img src="../../assets/img/profile.jpg" alt="Profile Photo" />
+      </div>
+
+      <div class="right">
+
+        <h1 id="name"></h1>
+        <p id="description"></p>
+        <a href="../about/index.html" class="contact-btn">learn more</a>
+      </div>
+    </section>
+
+    <section class="doing-section">
+      <h2>What I'm Doing</h2>
+      <div class="doing-grid" id="doing-grid"></div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-container">
+      <p>Contact me</p>
+      <ul>
+        <li>Email: <a href="mailto:firstforgestudio@gmail.com">firstforgestudio@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/Jajafirst" target="_blank">github.com/Jajafirst</a></li>
+      </ul>
+      <p class="copyright">&copy; 2025 Jatupon Itsara. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../datas/about.js"></script>
+  <script src="../../datas/script.js"></script>
+
+  <script>
+
+    document.getElementById("name").innerText = `My name is ${aboutData.name}.`;
+    document.getElementById("description").innerText = aboutData.description;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const doingGrid = document.getElementById("doing-grid");
+
+      if (doingGrid && window.doingList?.doing) {
+        window.doingList.doing.forEach((activity) => {
+          const div = document.createElement("div");
+          div.className = "doing-item";
+          div.textContent = activity;
+          doingGrid.appendChild(div);
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>

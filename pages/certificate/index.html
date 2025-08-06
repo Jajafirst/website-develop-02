@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Certificates</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+ 
+    <header>
+      <div class="name">Jatupon Itsara</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav id="menu">
+        <a href="../../pages/home/index.html">Home</a>
+        <a href="../../pages/about/index.html">About Me</a>
+        <a href="../../pages/project/index.html">Project</a>
+        <a href="../../pages/certificate/index.html">Certificate</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>My Certificates</h2>
+      <div id="certificate-grid" class="certificate-grid"></div>
+    </main>
+
+    <footer id="contact">
+      <div class="footer-container">
+        <p>Contact me</p>
+        <ul>
+          <li>Email: <a href="mailto:firstforgestudio@gmail.com">firstforgestudio@gmail.com</a></li>
+          <li>GitHub: <a href="https://github.com/Jajafirst" target="_blank">github.com/Jajafirst</a></li>
+        </ul>
+        <p class="copyright">&copy; 2025 Jatupon Itsara. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../../datas/certificate.js"></script>
+    <script src="../../datas/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const grid = document.getElementById("certificate-grid");
+
+        if (grid && typeof certificateData !== "undefined") {
+          certificateData.forEach(cert => {
+            const card = document.createElement("div");
+            card.className = "certificate-card";
+            card.innerHTML = `
+            <img src="${cert.pic}" alt="${cert.title}">
+            <h3>${cert.title}</h3>
+            <p>${cert.description}</p>
+          `;
+            grid.appendChild(card);
+          });
+        }
+      });
+
+      // Optional: mobile nav toggle (if you’re using hamburger menu)
+      function toggleMenu() {
+        document.getElementById("menu").classList.toggle("show");
+      }
+    </script>
+</body>
+
+</html>
