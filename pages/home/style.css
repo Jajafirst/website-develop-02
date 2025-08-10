@@ -5,6 +5,8 @@ body {
   color: #111;
 }
 
+/* header */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -44,6 +46,8 @@ nav a:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
+
+/*body*/
 
 
 .resume-btn {
@@ -119,6 +123,8 @@ nav a:hover::after {
   transition: transform 0.2s;
 }
 
+/* footer */
+
 footer {
   margin-top: 60px;
   padding: 40px 20px;
@@ -161,13 +167,13 @@ footer .copyright {
   color: grey;
 }
 
+/* responsive */
+
 .hamburger {
   display: none;
   font-size: 24px;
   cursor: pointer;
 }
-
-
 
 @media (max-width: 768px) {
   .intro-section {

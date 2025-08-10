@@ -10,60 +10,86 @@
 
 <body>
 
- 
-    <header>
-      <div class="name">Jatupon Itsara</div>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-      <nav id="menu">
-        <a href="../../pages/home/index.html">Home</a>
-        <a href="../../pages/about/index.html">About Me</a>
-        <a href="../../pages/project/index.html">Project</a>
-        <a href="../../pages/certificate/index.html">Certificate</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
 
-    <main>
-      <h2>My Certificates</h2>
-      <div id="certificate-grid" class="certificate-grid"></div>
-    </main>
+  <header>
+    <div class="name">Jatupon Itsara</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="../../pages/home/index.html">Home</a>
+      <a href="../../pages/about/index.html">About Me</a>
+      <a href="../../pages/project/index.html">Project</a>
+      <a href="../../pages/certificate/index.html">Certificate</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <footer id="contact">
-      <div class="footer-container">
-        <p>Contact me</p>
-        <ul>
-          <li>Email: <a href="mailto:firstforgestudio@gmail.com">firstforgestudio@gmail.com</a></li>
-          <li>GitHub: <a href="https://github.com/Jajafirst" target="_blank">github.com/Jajafirst</a></li>
-        </ul>
-        <p class="copyright">&copy; 2025 Jatupon Itsara. All rights reserved.</p>
+  <main>
+    <h2>My Certificates</h2>
+    <div class="certificate-grid">
+      <div class="certificate-card">
+        <img src="../../assets/img/cer1.JPG" alt="Certificate Title 1">
+        <h3>Python Pythonic</h3>
+        <p>Completed a course on pythonic</p>
       </div>
-    </footer>
 
-    <script src="../../datas/certificate.js"></script>
-    <script src="../../datas/script.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const grid = document.getElementById("certificate-grid");
+      <div class="certificate-card">
+        <img src="../../assets/img/cer2.JPG" alt="Certificate Title 1">
+        <h3>Prettier HTML</h3>
+        <p>Learned how to make the website 2</p>
+      </div>
 
-        if (grid && typeof certificateData !== "undefined") {
-          certificateData.forEach(cert => {
-            const card = document.createElement("div");
-            card.className = "certificate-card";
-            card.innerHTML = `
-            <img src="${cert.pic}" alt="${cert.title}">
-            <h3>${cert.title}</h3>
-            <p>${cert.description}</p>
-          `;
-            grid.appendChild(card);
-          });
-        }
-      });
+      <div class="certificate-card">
+        <img src="../../assets/img/cer3.JPG" alt="Certificate Title 1">
+        <h3>HTML</h3>
+        <p>Learned how to make the website 1</p>
+      </div>
 
-      // Optional: mobile nav toggle (if you’re using hamburger menu)
-      function toggleMenu() {
-        document.getElementById("menu").classList.toggle("show");
-      }
-    </script>
+      <div class="certificate-card">
+        <img src="../../assets/img/cer4.JPG" alt="Certificate Title 1">
+        <h3>Python</h3>
+        <p>Learned programming langguage (python 2)</p>
+      </div>
+
+      <div class="certificate-card">
+        <img src="../../assets/img/cer5.JPG" alt="Certificate Title 1">
+        <h3>Pre-Python</h3>
+        <p>Learned programming langguage (python 1)</p>
+      </div>
+
+      <div class="certificate-card">
+        <img src="../../assets/img/cer6.JPG" alt="Certificate Title 1">
+        <h3>Game in Scratch LV3</h3>
+        <p>how to make game by scratch LV3</p>
+      </div>
+
+      <div class="certificate-card">
+        <img src="../../assets/img/cer7.JPG" alt="Certificate Title 1">
+        <h3>Game in Scratch LV2</h3>
+        <p>how to make game by scratch LV2</p>
+      </div>
+
+      <div class="certificate-card">
+        <img src="../../assets/img/cer8.JPG" alt="Certificate Title 1">
+        <h3>Game in Scratch LV1</h3>
+        <p>how to make game by scratch LV1</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-container">
+      <p>Contact me</p>
+      <ul>
+        <li>Email: <a href="mailto:firstforgestudio@gmail.com">firstforgestudio@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/Jajafirst" target="_blank">github.com/Jajafirst</a></li>
+      </ul>
+      <p class="copyright">&copy; 2025 Jatupon Itsara. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+
 </body>
 
 </html>
